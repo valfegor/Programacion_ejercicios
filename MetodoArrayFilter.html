@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //filter crea un nuevo arreglo basado en el parametro que es evaluado
+        const carrito = [
+            {nombre:"Tv 32 pulgadas" ,
+            precio:200
+            },
+            {nombre:"Tv 42 pulgadas" ,
+            precio:300
+            },
+            {nombre:"Tv 70 pulgadas" ,
+            precio:250
+            },
+            {nombre:"Tv 100 pulgadas" ,
+            precio:320
+            },
+            {nombre:"Tv 90 pulgadas" ,
+            precio:560
+            },
+            {nombre:"Tv 120 pulgadas" ,
+            precio:700
+            },
+        ]
+
+        //ejemplo digamos que queremos traernos todos los productos que cuesten 200 en neustro arreglo.
+
+        let resultado ;
+        //es una arrowfunction
+        //despues de la flecha se pasa la condicion que queremos revisar 
+        //esto devuelve todos los productos que tengan precio mayor a 200 
+        //filter crea un nuevo arreglo en este caso resultado
+        resultado=carrito.filter(producto=>producto.precio>200);
+
+
+        if(resultado){
+            alert("Esos productos si tienen descuento");
+        }
+
+        resultado = carrito.filter(producto=>producto.precio<400);
+        
+        console.log(resultado);
+        
+        //supongamos que me quiero traer todos los productos excepto 1
+        //ejemplo persona presiona en el DOM sobre eliminar audifonos y queremos sacarlo del arreglo
+        resultado2 = carrito.filter(producto=>producto.nombre!=="Tv 120 pulgadas");
+
+        console.log(resultado2);   
+         </script>
+</body>
+</html>

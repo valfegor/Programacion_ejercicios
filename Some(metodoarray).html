@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //array con indices
+        const meses = ['enero' , 'febrero' , 'marzo' , 'abril' , 'Mayo' , 'junio'];
+        
+        //array de objetos.
+
+        const carrito = [
+            {nombre:"Tv 32 pulgadas" ,
+            precio:200
+            },
+            {nombre:"Tv 42 pulgadas" ,
+            precio:300
+            },
+            {nombre:"Tv 70 pulgadas" ,
+            precio:250
+            },
+            {nombre:"Tv 100 pulgadas" ,
+            precio:320
+            },
+            {nombre:"Tv 90 pulgadas" ,
+            precio:560
+            },
+            {nombre:"Tv 120 pulgadas" ,
+            precio:700
+            },
+        ]
+        
+        //comprobar si un valor existe en un arreglo.
+        //recorre todos los elementos del array
+        meses.forEach((mes)=>{
+            console.log(mes);
+            if(mes=='enero'){
+                console.log('Si existe enero');
+            }
+        })
+
+        //uso de includes para validar si un elemento existe en un arreglo
+        //Devuelve true , pues si esta dentro del arreglo
+        //esto solo funciona con arrays de indice
+        const resultado = meses.includes('enero');
+        console.log(resultado);
+        //resultado2 devuelve false pues no se encuentra dentro del arreglo
+        const resultado2 = meses.includes('Diciembre');
+        //en un arreglo de objetos se utiliza .Some
+        //.some es un arrow function igual a foreach o a map
+        //tiene un parentesis en donde se le puede pasar cualquier nombre
+        const existe = carrito.some((producto)=>{
+            return producto.nombre==='Celular'; 
+        });
+        //Devuelve false pues celular no se encuentra en el objeto
+        console.log(existe);    
+        //devuelve true pues la propiedad del objeto si se encuentra
+        const existe2 = carrito.some((producto)=>{
+            return producto.nombre === 'Tv 120 pulgadas';
+        })
+        console.log(existe2);   
+
+        //en un arreglo de indices.
+        //esto es un arreglo tradicional con .some
+
+        //esto devuelve true pues si se encuentra en el arreglo
+        const existe3 = meses.some((mes)=>{
+            return mes==="febrero";
+        });
+
+        console.log(existe3);
+    </script>
+</body>
+</html>

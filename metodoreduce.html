@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const meses = ['enero' , 'febrero' , 'marzo' , 'abril' , 'Mayo' , 'junio'];
+        const carrito = [
+            {nombre:"Tv 32 pulgadas" ,
+            precio:200
+            },
+            {nombre:"Tv 42 pulgadas" ,
+            precio:300
+            },
+            {nombre:"Tv 70 pulgadas" ,
+            precio:250
+            },
+            {nombre:"Tv 100 pulgadas" ,
+            precio:320
+            },
+            {nombre:"Tv 90 pulgadas" ,
+            precio:560
+            },
+            {nombre:"Tv 120 pulgadas" ,
+            precio:700
+            },
+        ]
+            //metodo reduce
+            //es una funcion reductora
+            //es tomar una gran cantidad de datos y unirlos para entregar el resultado final.
+            //supongamos que del carrito de compras tenemos que decirle cuanto tiene que pagar.
+
+            //Con metodo forEach.
+            //se itera sobre cada uno de los productos y se va a ir sumando
+            let total = 0;
+            carrito.forEach((producto)=>{
+                //a total que esta en 0 le vamos a ir sumando
+                total+=producto.precio
+            })
+            //devuelve la suma total es decir el total de los precios
+            console.log(total);
+
+
+            //Ahora con metodo REDUCE.
+            //se le pasan 2 valores 1.el valor anterior y el segundo es el valor actual
+            let resultado =carrito.reduce((total,producto)=>{
+                total + producto.precio,0;
+            });
+
+            console.log(resultado);
+    </script>
+</body>
+</html>

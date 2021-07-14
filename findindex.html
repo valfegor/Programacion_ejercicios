@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const carrito = [
+            {nombre:"Tv 32 pulgadas" ,
+            precio:200
+            },
+            {nombre:"Tv 42 pulgadas" ,
+            precio:300
+            },
+            {nombre:"Tv 70 pulgadas" ,
+            precio:250
+            },
+            {nombre:"Tv 100 pulgadas" ,
+            precio:320
+            },
+            {nombre:"Tv 90 pulgadas" ,
+            precio:560
+            },
+            {nombre:"Tv 120 pulgadas" ,
+            precio:700
+            },
+        ]
+
+        const meses = ['enero' , 'febrero' , 'marzo' , 'abril' , 'Mayo' , 'junio'];
+
+        //conocer el indice de un elemento utilizando forEach.
+        //el segundo parametro es el indice del elemento actual
+        //esto devuelve 1,2,3,4,5
+        meses.forEach((mes,i)=>{
+            //esto muestra el indice en donde esta ubicado
+            console.log(i);
+            //esto muestra el valor
+            console.log(mes);
+
+            //buscar el indice en un foreach
+            if(mes==='enero'){
+                console.log(`Lo he encontrado en la posicion ${i}`)
+            }
+        })
+
+        //metodo FINDINDEX
+        //encontrar el metodo de abril.
+        //tambien es un arrow function.
+        const indice = meses.findIndex((mes)=>{
+            mes==="enero";
+        })
+
+        console.log(indice);
+
+        //es una forma sencilla de comparar si un valor existe o no
+        if(indice>0){
+            console.log('si existe');
+        }
+
+        const indice2 = carrito.findIndex((producto)=>{
+            return producto.nombre==="Tv 42 pulgadas";
+        })
+        
+        console.log(indice2);
+            </script>
+</body>
+</html>

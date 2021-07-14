@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const carrito = [
+            {nombre:"Tv 32 pulgadas" ,
+            precio:200
+            },
+            {nombre:"Tv 42 pulgadas" ,
+            precio:300
+            },
+            {nombre:"Tv 70 pulgadas" ,
+            precio:250
+            },
+            {nombre:"Tv 100 pulgadas" ,
+            precio:320
+            },
+            {nombre:"Tv 90 pulgadas" ,
+            precio:560
+            },
+            {nombre:"Tv 120 pulgadas" ,
+            precio:700
+            },
+        ]
+
+        //con un FOREACH.
+
+        let resultado = "";
+        //vamos a iterar sobre todos los valores y su indice
+        carrito.forEach((producto,i)=>{
+            //si se encuentra la propiedad se la asigno a resultado
+            if(producto.nombre==="Tv 120 pulgadas"){
+                resultado = carrito[i];
+            }
+        }),
+        //esto devuelve un objeto el mismo que esta en TV pulgadas
+        console.log(resultado);
+
+        //creando una segunda variable
+        //.find solo va a retornar el primer elemento que cumpla la condicion
+        //si quiero traerme todos los que son iguales debo utilizar .filter
+        const resultado2 = carrito.find(producto=>producto.nombre==='Tv 120 pulgadas');
+
+        console.log(resultado2);
+    </script>
+</body>
+</html>
