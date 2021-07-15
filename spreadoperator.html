@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //spread operator en JS.
+        const meses = ['enero' , 'febrero' , 'marzo' , 'abril' , 'Mayo' , 'junio'];
+
+        const carrito = [
+            {nombre:"Tv 32 pulgadas" ,
+            precio:200
+            },
+            {nombre:"Tablet" ,
+            precio:300
+            },
+            {nombre:"Diadema" ,
+            precio:250
+            },
+            {nombre:"Mesa" ,
+            precio:320
+            },
+            {nombre:"Mesita" ,
+            precio:560
+            },
+            {nombre:"armario" ,
+            precio:700
+            },
+        ]
+        
+        //esto no modifica el arreglo original
+        //es buena manera de hacerlo en programacion funcional
+        const meses2 = [...meses,"Hola"];
+
+        //ahora si agrego un elemento a ese arreglo utilizando PUSH.
+        //esto si modifica el arreglo original
+        meses.push('agosto');
+
+        //spread operator en arreglo de objetos
+
+        producto={producto:'discoduro',precio:500}
+
+        //como se agrega este producto al carrito?
+        //el nuevo objeto no debe ir con los tres puntos debe ir separado unicamente por la coma
+        const carrito2 =[...carrito,producto];
+        console.log(carrito2);
+
+    </script>
+</body>
+</html>
