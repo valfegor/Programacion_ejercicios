@@ -1,9 +1,10 @@
 //se toma el boton y adicional el icono
-let playicon = document.querySelectorAll("#iniciar i");
+let playicon = document.querySelectorAll("#icono");
+console.log(playicon);
 //se toma el valor de video que actualmente es el id
-let video = document.getelementByid("video");
+let video = document.getElementById("video");
 //tomamos la duracion que en este caso sera el SPAM donde imprimiremos el tiempo;
-let totalduration = document.getelementByid("totalduration");
+let totalduration = document.getElementById("totalduration");
 //se toma el tiempo del video que sera impreso por medio del span
 let videotime = document.getElementById("tiempovideo");
 
@@ -19,11 +20,11 @@ iniciar.addEventListener('click',function(){
 
     if(video.paused){
         video.play();
-        playIcon.classList.replace("fa-play","fa-pause");
+        playicon.classList.replace("fa-play","fa-pause");
     }
     else{
         video.pause();
-        playIcon.classList.replace("fa-pause","fa-play");
+        playicon.classList.replace("fa-pause","fa-play");
     }
 
 })
@@ -34,7 +35,7 @@ playback.addEventListener("input",function(){
 })
 
 video.addEventListener("timeupdate" ,function(){
-    videoTime.innerHTML = Math.floor(video.currentTime);
+    videotime.innerHTML = Math.floor(video.currentTime);
     playback.value = video.currentTime;
     playback.max = Math.floor(video.duration);
 })
