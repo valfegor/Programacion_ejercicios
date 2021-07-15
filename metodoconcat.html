@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const meses = ['enero' , 'febrero' , 'marzo' , 'abril' , 'Mayo' , 'junio'];
+        const meses2 = ['julio','agosto' , 'septiembre','octubre','diciembre'];
+        //array metodo llamado concat es decir permite unir 2 arreglos.
+
+        //se crea una nueva variable que es la que va a llevar la concatenacion
+        //se concatena meses que es el primer arreglos
+        //por parentesis se pasa el arreglo que deseo concatenar o unir
+        const meses3 = meses.concat((meses2));
+
+        console.log(meses3)
+
+        //tambien se puede concatenar varios arreglos
+
+        const saludo=['hola' , 'amigos'];
+        //tambien se puede pasar una cadena de texto
+        resultado = meses.concat((meses2, saludo,'hola'));
+        console.log(resultado);
+
+        //con spread operator.
+        //se utiliza para indicar (...copiademeses),(...copiademeses2);
+        const resultado2 = [...meses,...meses2,...saludo];
+
+        console.log(resultado2);
+
+        //se puede pasar una cadena de texto al spreadoperator.
+        //si la cadena de texto se pasa con ... esto crea un arreglo con cada una de las letras
+        const resultado3 = [...meses,...meses2,...saludo,"Hola",..."hola"]
+    </script>
+</body>
+</html>

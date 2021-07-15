@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //metodo every
+
+        const carrito = [
+            {nombre:"Tv 32 pulgadas" ,
+            precio:200
+            },
+            {nombre:"Tablet" ,
+            precio:300
+            },
+            {nombre:"Diadema" ,
+            precio:250
+            },
+            {nombre:"Mesa" ,
+            precio:320
+            },
+            {nombre:"Mesita" ,
+            precio:560
+            },
+            {nombre:"armario" ,
+            precio:700
+            },
+        ]
+
+        //el metodo every debe ser todos los elementos de un arreglo debe cumplir esa condicion
+        //el metodo every devuelve un true
+        //esto devuelve true pues todos los elementos cumplen esta condicion
+        //esto es la version del AND
+        const resultado = carrito.every(producto=>producto.precio<1000);
+        console.log(resultado);
+        
+        //version del or
+        //si quiero revisar solo que uno cumpla la condicion se usa .some
+        //devuelve true pues uno de los elementos cumple la condicion
+        const resultado2 = carrito.some((producto)=>{
+         producto.precio<500;    
+        }).
+
+
+
+        console.log(resultado2);
+    </script>
+</body>
+</html>
