@@ -20,4 +20,4 @@ const forumario = document.querySelector('#formulario');
 
 //seleccionar elementos HTML
 
-const navegacion = document.querySelector('nav');
+const navegacion = document.querySelector('nav');   
