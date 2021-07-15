@@ -49,8 +49,39 @@ body {
     outline:none;
     border:0;
     margin:0 .5rem;
-    
+
 }
 
 
+#playback::-webkit-slider-thumb {
+    outline:none;
+    border: 0;
+    -webkit-appearance:none;
+    height:20px;
+    width:20px;
+    border-radius:10px;
+    cursor:pointer;
+    background-color: white;
+    transition:0.3s;
+}
 
+#playback:active::-webkit-slider-thumb {
+ box-shadow: 0 0 0 5px rgba(255,255,255,0.3);
+
+}
+
+.timer{
+    width:60px;
+    text-align: center;
+}
+
+#iniciar {
+width:25px;
+border:0;
+outline:none;
+background: none;
+font-size: 20px;
+color: var(--azul);
+margin: 0 .5rem;
+cursor: pointer;
+}
