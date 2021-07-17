@@ -54,11 +54,13 @@ function mostrarOcultarFooter () {
     if(footer.classList.contains('.activo')){
         footer.classList.remove('.activo');
         btnflotante.classList.remove('.activo');
+        btnflotante.textContent = 'Dame clic';
 
     }
     else{
         footer.classList.add('.activo');
         btnflotante.classList.add('activo');
+        btnflotante.textContent ='X cerrar';
     }
     
 
@@ -76,15 +78,18 @@ function mostrarOcultarFooter () {
     //significa que la clase se añadio
     //la primera vez que se haga clic no va a tener la clase de activo por lo tanto esto recae en el Else.
     //se añade las clases al boton flotante
-    //tambien se puede hacer uso de THIS ya que estamos haciendo referencia al boton , el boton es el que dispara el evento
+    //tambien se puede hacer uso de THIS ya que estamos haciendo referencia al boton , el boton es el que dispara el evento 
     if(footer.classList.contains('.activo')){
         footer.classList.remove('.activo');
         this.classList.remove('.activo');
+        btnflotante.textContent ='Dame clic';
 
     }
     else{
         footer.classList.add('.activo');
         this.classList.add('activo');
+        //al dar clic se abre el footer y el boton debe cambiar a cerrar
+        this.textContent = 'X cerrar';
     }
     
 
