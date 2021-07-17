@@ -46,4 +46,19 @@ navegacion.appendChild(enlace);
 navegacion.insertBefore(enlace,navegacion.children[1]);
 
 
-//lo mismo que se tenga en el html se puede construir
+//lo mismo que se tenga en el html se puede construir.
+//es decir se tiliza primero create element y se puede ir agregando atributos como por ejemplo.
+
+enlace.setAttribute('data-enlace','nuevo-enlace');
+
+enlace.classList.add('Nueva-clase');
+
+//tambien es comun conforme se creen elementos se pueden crear funciones
+//ejemplos ; 
+
+enlace.onclick = miFunctions;
+
+
+function miFunctions () {
+    alert('diste click perro');
+}
