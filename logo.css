@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.loadingscreen {
+    height: 100vh;
+    width: 100%;
+
+    /*Posisiona en la mitad*/
+    position: static;
+    
+
+}
+
+.loading {
+    width: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    animation : rotate 3s linear infinite;
+
+}
+
+.loading span {
+    width:32px;
+    height:32px;
+    background-color : orangered;
+    margin: 4px;
+    animation : scale 1.5s linear infinite;
+}
+
+@keyframes scale{
+    50%{
+        transform:scale(1.2);
+    }
+}
+
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.loading span:nth-child(1){
+    border-radius: 50% 50% 0 50%;
+    background-color : #e64132;
+    transform-origin: bottom right;
+}
+
+.loading span:nth-child(2){
+    border-radius: 50% 50% 50% 0;
+    background-color : blue;
+    transform-origin: bottom left;
+}
+.loading span:nth-child(3){
+    border-radius: 50% 0 50% 50%;
+    background-color : blueviolet;
+    transform-origin: bottom right;
+}
+.loading span:nth-child(4){
+    border-radius: 0 50% 50% 50%;
+    background-color : green;
+    transform-origin: bottom left;
+}
