@@ -59,8 +59,22 @@
         //adicional obtener algun resultado o validar un formulario.
 
         busqueda.addEventListener("input",(e)=>{
-            //el tipo muestra la clase de elemento en este caso arroja input
+            //el tipo muestra la clase de elemento en este caso arroja input    
             console.log(e.type);
+            
+            //esto devuelve exactamente a que input en especifico estoy escribiendo
+            console.log(e.target);
+
+            //si quiero saber lo que el usuario esta escribiendo.
+            //generalmente se utiliza en busquedas 
+            console.log(e.target.value);
+
+            //tambien se puede utilizar con sentencias de control de flujo , para que ejemplo validar el formulario.
+            //Es una forma de validar que un formulario tenga los campos llenos.
+            if(e.target.value===""){
+                console.log("fallo la validacion");
+            }
+
         })
     </script>
 </body>
