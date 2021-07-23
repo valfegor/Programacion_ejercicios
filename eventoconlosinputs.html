@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //existen diferentes tipos de eventos en este caso ejemplo un conador que muestre cuantas palabras llevas escritas
+        //o en formularios como por ejemplo al escribir ="ese email no es valido";
+
+        const busqueda = document.querySelector(".busqueda");
+        //key down se ejecuta al pulsar una tecla
+        busqueda.addEventListener("keydown",()=>{
+            console.log("escribiendo");
+        })
+
+        //otro evento utilizado es el keyup
+        //esto se ejecuta cuando se suelta la tecla es decir se presiona y luego se suelta
+
+        busqueda.addEventListener("keyup",()=>{
+            console.log("escribiendo");
+        })
+
+        //uno muy comun en la validacion de formularios.
+        //Es blur.
+        //blur se activa cuando doy clic al imput y luego doy clic fuera del input
+        busqueda.addEventListener("blur",()=>{
+            console.log("escribiendo");
+        })
+
+        //otro evento con el teclado COPY
+        //Este evento se activa solamente cuando se copia el texto.
+
+        busqueda.addEventListener("copy",()=>{
+            console.log("escribiendo");
+        })
+
+        //asi mismo con pegar
+    </script>
+</body>
+</html>
