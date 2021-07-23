@@ -49,7 +49,19 @@
             console.log("escribiendo");
         })
 
-        
+        //tambien tenemos un evento global es decir engloba absolutamente todos los eventos anteriores.
+        //El nombre del Evento es INPUT unicamente excluye el blur
+        busqueda.addEventListener("input",()=>{
+            console.log("escribiendo");
+        })
+
+        //lo ideal seria saber que escribe el usuario para poder enviar la consulta a una base de datos o web service.
+        //adicional obtener algun resultado o validar un formulario.
+
+        busqueda.addEventListener("input",(e)=>{
+            //el tipo muestra la clase de elemento en este caso arroja input
+            console.log(e.type);
+        })
     </script>
 </body>
 </html>
