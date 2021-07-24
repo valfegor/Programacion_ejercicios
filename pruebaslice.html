@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="bienvenida"></span>
+
+    <script>
+        let bienvenida = document.getElementById("bienvenida");
+        console.log(bienvenida);
+        let    nombre = prompt("Digite por favor su nombre");
+
+       
+
+        revisar(nombre);
+
+        function revisar(a){
+
+         
+
+            let i = 0;
+            let nombre2 = "";
+
+           while(i<a.length){
+
+           
+            
+
+            nombre2 = nombre2 + a[i];
+
+            console.log(nombre2);
+
+            i++;
+           }
+           return bienvenida.innerHTML=nombre2;
+           
+            
+
+
+        }
+
+       
+        
+   
+
+       
+
+
+    </script>
+</body>
+</html>
