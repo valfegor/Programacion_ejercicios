@@ -10,28 +10,18 @@
     <span id="span"></span>
 
     <script>
-    
+        let bienvenida = document.getElementById('span')
     nombre = prompt("bienvenido ingrese");
 
-    mostrar(nombre);
-    function mostrar(nombre){
-        
-        bienvenida = document.getElementById('span');
 
-        let array = [];
+  const userCounter = parseInt(prompt("digite"));
 
+ 
 
+const wordsRepeat = Array(userCounter).fill(nombre);
 
-       array.push(nombre);
+bienvenida.innerHTML=wordsRepeat;
 
-       let nuevoarray=array.concat(array,array)
-
-        console.log(nuevoarray);
-
-        return bienvenida.innerHTML = nuevoarray;
-
-
-    }
 
 
 
