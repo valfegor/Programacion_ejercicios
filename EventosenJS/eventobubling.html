@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //event bubbling
+
+        //event bubling cuando presionamos en un evento pero se propaga por otros lugares
+        //dando resultados no esperados.
+
+        //selecciono el div de las cards.
+
+        //el event bubbling ocurre cuando hago clic sobre un elemento y se disparan los demas.
+        const cadDiv = document.querySelector('.card');
+
+        const infoDiv = document.querySelect('.info');
+
+        const titulo = document.querySelector('.titulo');
+
+
+        //como se tiene event preventdefault tambien se puede utilizar e.stopPropagation();
+
+        //esto evita que se propaguen multiples eventos al dar clic si estan relacionados
+
+        cardDiv.addEventListener('click',(e)=>{
+            e.stopPropagation();
+            console.log('click en card');
+        })
+
+        infoDiv.addEventListener('click',()=>{
+            e.stopPropagation();
+            console.log('click en info');
+        })
+
+
+        titulo.addEventListener('click',()=>{
+            e.stopPropagation();
+            console.log('click en titulo');
+        })
+
+
+    </script>
+</body>
+</html>
