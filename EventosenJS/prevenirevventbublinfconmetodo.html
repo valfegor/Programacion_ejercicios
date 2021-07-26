@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //como prevenir el event bubbling con un evento.
+        //tecnica cuando se genera contenido HTML
+        //repasando como crear un card.
+
+
+        //creo principalmente el parrafo que voy a utilizar.
+        const parrafo1 = document.createElement('p');
+
+        //el texto que va a contener nuestro parrafo
+        parrafo1.textContent = "Concierto";
+
+        //se añaden las clases
+        parrafo1.classList.add('categoria');
+
+        parrafo1.classList.add('concierto');
+
+
+        //parrafo 2 
+
+        //creamos la etiqueta p
+        const parrafo2 = document.createElement('p');
+
+        parrafo2.textContent ="Concierto de rock";
+
+        parrafo2.classList.add('titulo');
+
+
+        //parrafo 3
+
+
+        const parrafo3 = document.createElement('p');
+        parrafo3.textContent ="800 por persona";
+        parrafo3.classList.add('precio');
+
+        //se puede añadir un evento a parrafo.
+
+        //la funcion se declara al final
+        parrafo3.onclick = nuevaFuncion;
+
+        //creando el div.
+
+        const info = document.createElement('div');
+        info.classList.add('info');
+
+        //se añade la clase
+        info.appendChild(parrafo1);
+        info.appendChild(parrafo2);
+        info.appendChild(parrafo3);
+
+        console.log(info);
+
+        //creando la imagen
+        const imagen = document.createElement('img');
+        imagen.src = "http://"
+
+        //creando el card
+
+        const contenedorCard = document.createElement('div');
+
+        contenedor.classList.add('contenedorCard');
+
+        //asignando la imagen al card.
+
+        contenedorCard.appendChild(imagen);
+        contenedorCard.appendChild(info);
+
+        //Esta tecnica funciona cuando se genera contenido HTML
+        nuevaFuncion(){
+            console.log('desde nueva funcion');
+        }; 
+    </script>
+</body>
+</html>
