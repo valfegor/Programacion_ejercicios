@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //event delegation parecido a bubling
+        const cardDiv = document.querySelector('.card');
+
+
+        cardDiv.addEventListener('click',(e)=>{
+            console.log('clic en card');
+            //a que le estoy dando clic
+            e.target
+
+            //como escribir un codigo al cual le pueda dar clic al 
+            //al div , al texto , al precio.
+
+            if(e.target.classList.contains('titulo')){
+                console.log('diste clic en titulo');
+            }
+
+            if(e.target.classList.contains('precio')){
+                console.log('diste clic en precio');
+            }
+
+            if(e.target.classList.contains('card')){
+                console.log('diste clic en card');
+            }
+
+        });
+    </script>
+</body>
+</html>
