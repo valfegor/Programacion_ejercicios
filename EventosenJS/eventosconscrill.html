@@ -27,7 +27,18 @@
 
             //este metodo contiene informacion sobre la distancia hasta llegar a ese objeto
             //ancho , coordenadas
+            //mensiona en que lugar se encuentra el elemento
             const ubicacion = premium.getBoundingClientRect();
+
+            //se revisa bootom o top
+            //al llegar a esa ubicacion se puede agregar clases de CSS
+            if(ubicacion.top<784){
+                console.log('el elemento ya esta visible');
+            }
+            else{
+                console.log('Aun no esta visible debe dar mas scroll')
+            }
+
         });
 
 
