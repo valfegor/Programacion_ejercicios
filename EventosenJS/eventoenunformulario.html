@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //se obtiene el formulario que estoy trabajando.
+        
+        const formulario = document.querySelector('#formulario');
+
+        //todos los inputs con tipo submit es decir botones etc
+        formulario.addEventListener('submit',(e)=>{
+
+            //esto evita que se realizen acciones por default
+            //entrar a un enlace o enviar el formulario
+            e.preventDefault();
+
+            //esto devuelve el metodo que tiene en este caso = POST
+            e.target.method
+
+            //devuuelve la direccion de a donde se estan enviando los datos.
+            e.target.action 
+
+
+        })
+
+
+        //se pasa la e como un evento
+        function validarFormulario(e){
+            e.preventDefault();
+
+            //esto devuelve el metodo que tiene en este caso = POST
+            e.target.method
+
+            //devuuelve la direccion de a donde se estan enviando los datos.
+            e.target.action 
+        }
+
+
+
+
+        //si deseo utilizar ya una funcion y no una anonima.
+
+        formulario.addEventListener('submit',validarFormulario);
+
+
+    </script>
+</body>
+</html>
