@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //lista de eventos utilizando SCROLl
+
+        //el evento se ejecuta cada vez que realizamos scroll a nuestra pantalla para
+
+        window.addEventListener('scroll', ()=>{
+            console.log('scrolling');
+
+            //como detectar la cantidad de scroll vertical.
+            const scrollPX = window.scrollY;
+            console.log(scrollPX);
+
+
+            //ejemplo se esta realizando escroll y una seccion realiza una vez las animaciones.
+
+            //obtengo el div padre en este caso alojamientos premium
+            const premium = document.querySelector(".premium");
+
+            //este metodo contiene informacion sobre la distancia hasta llegar a ese objeto
+            //ancho , coordenadas
+            const ubicacion = premium.getBoundingClientRect();
+        });
+
+
+    </script>
+</body>
+</html>
