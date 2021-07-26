@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //descripcion del problema el usuario va a ingresar un numero y se va a mostrar la tabla de multiplicar de ese numero
+
+      multiplicar();
+
+      function multiplicar() {
+        numero = parseInt(prompt("por favor introduzca un numero"));
+    
+
+        document.write("<h1>tabla de multiplicar" + numero +"</h1>");
+
+        //inicio del bucle para listar la tabla de multiplicar.
+
+
+        for(let i = 1 ; i<=11 ; i++) {
+
+            document.write(numero +  "X" + i +" " + " = " + (numero*i)+ " ");
+            document.write("<br>");
+
+        }
+        
+
+
+        //tablas de multiplicar del 1 hasta el 10.
+
+        //este bucle va desde el numero 1 hasta el numero 10
+        
+        for(var numero2 = 1 ; numero2<=10 ; numero2++) {
+
+            //Escribel titulo en la tabla
+            document.write("<h1>tabla de multiplicar" + numero2 +"</h1>");
+
+
+            //se ejecuta este bloque de codigo k vale 1 hasta que salga de este bloque se va a dejar de ejecutar
+            //es decir cuando k llegue a 10 se deja de repetir
+          for(var k = 1 ; k<=10;k++) {
+            //numero 2 va a ser 1 mientras que k sea igual a 1 
+            //es decir solamente hasta que k llegue a 10 numero 2 va a sumar
+            //es decir numero2 va a ser igual a 1 hasta que k llegue a 10 numero
+            //luego de eso numero2 vale 2.
+
+            document.write(numero2 +  "X" + k +" " + " = " + (numero*k)+ " ");
+            document.write("<br>");
+          }
+
+        }
+      }
+    </script>
+  </body>
+</html>
