@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //operador ternario en JS
+        //ejemplo.
+
+        (var1==4) && (var2==4) == ('ladra')?console.log("true"):console.log("false");
+
+
+        //voy a crear 2 variables y un condicional si va a preguntar si tiene 4 patas y ladra es un pero.
+
+        let patas =4 ;
+        let accion = "Ladra";
+
+        //de la manera normal seria.
+
+        if(patas==4 && accion =="Ladra"){
+            console.log("es un can");
+        }
+        else{
+            console.log("no es un can");
+        }
+
+        //como escribir en operador ternario.
+
+        //no se debe escribir la palabra if
+
+        //se coloca el signo de interrogacion despues de lo que quiero comparar luego del ? y de la salida
+        //se coloca el signo de dos puntos
+        (patas ==4) && (accion=="Ladra") ? console.log("Es un perro") : console.log("no es un perro");
+
+
+        //otro ejemplo con el operador ternario.
+
+        let edad = 19;
+        
+        let bebida = "";
+
+        if(edad>=21){
+            bebida = "cerveza";
+            console.log(bebida);
+        }
+        else{
+            bebida = "Gaseosa";
+            console.log(bebida); 
+        }
+
+        //utilizando el operador ternario.
+        //se coloca primero bebida
+        //en resumidas cuentas si la edad es mayor a 21 se asigna el valor cerveza o jugo a la variable bebida
+
+        let bebida = edad>=21?'cerveza':'jugo';
+        
+    </script>
+</body>
+</html>
